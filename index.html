@@ -4,13 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>EdgeFlow – Your AI-Powered Financial Mentor</title>
-  <meta name="description" content="EdgeFlow. Educație financiară cu AI. Demo Arena. Token $EFLOW. Investitori." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+  <!-- fundal -->
   <div class="bg"><div class="grid"></div><div class="glow"></div><div class="stars"></div></div>
 
+  <!-- NAV simplu: linkuri spre pagini complete -->
   <header class="nav">
     <a class="nav__brand" href="/">
       <img src="/assets/logo.png" alt="EdgeFlow Logo" class="logo">
@@ -37,8 +38,9 @@
     <button class="nav__toggle" id="navToggle" aria-label="Meniu"></button>
   </header>
 
-  <main class="hero hero--center">
-    <h1 class="hero__title tilt">EdgeFlow</h1>
+  <!-- HERO corectat: titlu se ajustează la ecran -->
+  <main class="hero">
+    <h1 class="hero__title">EdgeFlow</h1>
     <p class="hero__subtitle">Your AI-Powered Financial Mentor</p>
     <div class="hero__cta">
       <a class="btn btn--lg" href="/whitepaper/executive-summary.html">Deschide Whitepaper</a>
@@ -53,6 +55,11 @@
     </div>
   </footer>
 
-  <script src="/script.js"></script>
+  <script>
+    // Meniu mobil
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.querySelector('.nav__links');
+    if (navToggle) navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  </script>
 </body>
 </html>
