@@ -1,70 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>EdgeFlow – AI Financial Mentor</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">
-      <img src="/assets/logo.png" alt="EdgeFlow Logo">
-    </div>
-    <ul>
+  <!-- Background -->
+  <div class="bg"><div class="grid"></div><div class="glow"></div><div class="stars"></div></div>
+
+  <!-- NAV -->
+  <header class="ef-nav">
+    <a class="ef-brand" href="#home">
+      <img src="/assets/logo.png" alt="EdgeFlow Logo" class="ef-logo">
+    </a>
+    <button id="efNavToggle" class="ef-nav__toggle" aria-label="Meniu">☰</button>
+    <ul class="ef-nav__links" id="efNavLinks">
       <li><a href="#home">Home</a></li>
       <li><a href="#whitepaper">Whitepaper</a></li>
       <li><a href="#roadmap">Roadmap</a></li>
       <li><a href="#tokenomics">Tokenomics</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-  </nav>
+  </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <h1>EdgeFlow</h1>
-    <p>Your AI-Powered Financial Mentor</p>
-    <div class="buttons">
-      <a href="#whitepaper" class="btn">Open Whitepaper</a>
-      <a href="#contact" class="btn">Become Investor</a>
+  <!-- HERO -->
+  <section id="home" class="ef-hero">
+    <h1 class="ef-hero__title">EdgeFlow</h1>
+    <p class="ef-hero__subtitle">Your AI-Powered Financial Mentor</p>
+    <div class="ef-hero__cta">
+      <a class="ef-btn ef-btn--lg" href="#whitepaper">Open Whitepaper</a>
+      <a class="ef-btn ef-btn--lg" href="#contact">Become Investor</a>
     </div>
   </section>
 
-  <!-- Whitepaper Section -->
-  <section id="whitepaper" class="section">
-    <h2>Whitepaper</h2>
-    <p>
-      EdgeFlow is an AI-powered financial education platform combining 
-      structured lessons, AI-driven practice, gamification, and the $EFLOW token economy.
-      Our mission is to make professional-level financial knowledge and trading tools 
-      accessible to everyone.
-    </p>
+  <!-- WHITEPAPER -->
+  <section id="whitepaper" class="ef-section">
+    <h2 class="ef-section__title">Whitepaper</h2>
+    <div class="ef-panel">
+      <p>
+        EdgeFlow este o platformă de educație financiară asistată de AI care combină lecții
+        structurate, practică pe date reale și o economie tokenizată ($EFLOW). MentorAI ghidează
+        parcursul de învățare, Demo Arena oferă feedback în timp real, iar tokenul aliniază
+        motivația prin recompense, acces premium, staking și guvernanță.
+      </p>
+      <p>
+        Pentru un rezumat complet, folosește meniul sau derulează în jos. Pentru versiunea pe
+        pagini separate, avem și /whitepaper/*.html (le putem activa oricând).
+      </p>
+    </div>
   </section>
 
-  <!-- Roadmap Section -->
-  <section id="roadmap" class="section">
-    <h2>Roadmap</h2>
-    <p>Our strategic milestones:</p>
-    <img src="/assets/EFLOW_Roadmap_Timeline.png" alt="EdgeFlow Roadmap">
+  <!-- ROADMAP -->
+  <section id="roadmap" class="ef-section">
+    <h2 class="ef-section__title">Roadmap</h2>
+    <div class="ef-grid ef-col2">
+      <div class="ef-figure">
+        <!-- folosește exact denumirea ta din assets sau schimbă-o aici -->
+        <img src="/assets/EFLOW_Roadmap_Timeline.png" alt="EdgeFlow Roadmap" class="ef-img">
+      </div>
+      <div class="ef-panel">
+        <p>Q4 2025, MVP + Private Sale. Q1 2026, PancakeSwap + staking. Q2 2026, NFT badges + scenarii AI. Q3 2026, parteneriate + listare CEX + DAO. Q4 2026, scalare globală.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Tokenomics Section -->
-  <section id="tokenomics" class="section">
-    <h2>Tokenomics</h2>
-    <p>Distribution of $EFLOW supply:</p>
-    <img src="/assets/EFLOW_Tokenomics_Chart.png" alt="EFLOW Tokenomics">
+  <!-- TOKENOMICS -->
+  <section id="tokenomics" class="ef-section">
+    <h2 class="ef-section__title">Tokenomics</h2>
+    <div class="ef-grid ef-col2">
+      <div class="ef-panel">
+        <p>Supply: 1,000,000,000 EFLOW. Distribuție, 500M Rewards, 50M Liquidity, 150M Team, 200M Burn & Staking, 100M Partnerships. Conversie off-chain → on-chain plafonată lunar. Burn 0.5–1% pe tranzacție. Utilitate, acces premium, staking, guvernanță, recompense.</p>
+      </div>
+      <div class="ef-figure">
+        <!-- folosește exact denumirea ta din assets sau schimbă-o aici -->
+        <img src="/assets/EFLOW_Tokenomics_Chart.png" alt="EFLOW Tokenomics" class="ef-img">
+      </div>
+    </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:edgeflow@gmail.com">edgeflow@gmail.com</a></p>
+  <!-- CONTACT -->
+  <section id="contact" class="ef-section">
+    <h2 class="ef-section__title">Contact</h2>
+    <div class="ef-panel">
+      <p>Email, <a href="mailto:edgeflow@gmail.com">edgeflow@gmail.com</a></p>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 EdgeFlow. All rights reserved.</p>
+  <footer class="ef-footer">
+    <div class="ef-footer__inner">
+      <span>© 2025 EdgeFlow</span>
+      <a href="mailto:edgeflow@gmail.com">edgeflow@gmail.com</a>
+    </div>
   </footer>
+
+  <script>
+    // Toggle meniu mobil
+    const btn = document.getElementById('efNavToggle');
+    const links = document.getElementById('efNavLinks');
+    if (btn) btn.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
 </body>
 </html>
 
